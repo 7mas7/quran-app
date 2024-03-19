@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer components {
+  body {
+    @apply bg-dark-1 text-secondary;
+    font-family: 'Cairo', sans-serif;
+  }
+}
+
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+  .ltr {
+    direction: ltr;
+  }
+}
+
+
+.font-uthmanicHafs {
+  font-family: "Amiri Quran", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-aqlam {
+  font-family: "Aref Ruqaa", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Cairo', sans-serif;
+}
