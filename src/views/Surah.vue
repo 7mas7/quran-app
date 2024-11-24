@@ -67,7 +67,7 @@ export default {
         return {
             currentReciter: { id: null, name: null, audioId: null },
             currentSurah: this.$route.params.id, // the id of the surah,
-            surah: {},
+            surah: null,
             verseId: 1,
             verse: '',
             tafseer: ''
@@ -93,7 +93,7 @@ export default {
                 })
         },
         nextVerse: function() {
-            const lastIndex = this.verses.length - 1
+            const lastIndex = this.verse.length - 1
             if (this.verse != lastIndex) this.verse = this.verse + 1;
             this.getTafseer();
             this.verseId++;
