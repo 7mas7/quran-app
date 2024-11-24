@@ -82,15 +82,18 @@ export default {
                 })
         },
         prevVerse: function() {
-            // if the verse is not the first allready
-            if (this.verse != 0) this.verse = this.verse - 1;
-            this.getTafseer();
-            this.verseId++;
-            /* fetch all surahs */
-            axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
-                .then((res) => {
-                    this.verse = res.data
-                })
+           prevVerse: function() {
+    // Ensure verseId does not go below 1
+    if (this.verseId > 1) this.verseId--;
+    this.getTafseer();
+
+    /* Fetch the previous verse */
+    axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
+        .then((res) => {
+            this.verse = res.data;
+        });
+}
+
         },
         nextVerse: function() {
             const lastIndex = this.verse.length - 1
