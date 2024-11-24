@@ -82,17 +82,15 @@ export default {
                 })
         },
         prevVerse: function() {
-           prevVerse: function() {
-    // Ensure verseId does not go below 1
-    if (this.verseId > 1) this.verseId--;
-    this.getTafseer();
-
-    /* Fetch the previous verse */
-    axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
-        .then((res) => {
-            this.verse = res.data;
-        });
-}
+	    // Ensure verseId does not go below 1
+	    if (this.verseId > 1) this.verseId--;
+	    this.getTafseer();
+	
+	    /* Fetch the previous verse */
+	    axios.get(`https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/${this.$route.params.id}/${this.verseId}.json`)
+	        .then((res) => {
+	            this.verse = res.data;
+	        });
 
         },
         nextVerse: function() {
