@@ -1,6 +1,6 @@
 <template>
 	<div id="dashboard">
-		<h1 class="text-white font-extrabold lg:text-4xl text-center">استمع الي القراءن الكريم بأصوات العديد من القراء</h1>
+		<h1 class="text-white font-extrabold lg:text-4xl text-center">استمع الي القرآن الكريم بأصوات العديد من القراء</h1>
 		<SearchForm/>
 		<QuranReciters/>
 		<QuranSurahs/>
