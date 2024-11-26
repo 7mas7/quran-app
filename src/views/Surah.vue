@@ -1,7 +1,7 @@
 <template>
     <div class="surah-container">
         <div v-if="surah">
-            <h1 class="text-center text-6xl text-white font-extrabold font-uthmanicHafs">سورة {{ surah.name_arabic }}</h1>
+            <h1 class="text-center text-6xl text-white font-extrabold">سورة {{ surah.name_arabic }}</h1>
             <div class="flex items-center justify-center gap-2 mt-2">
                 <p>EN: {{ surah.translated_name.name }}</p>
                 |
@@ -30,7 +30,7 @@
 				 			text-4xl rtl flex items-center 
 				 			justify-center w-full p-5 gap-2
 				 			flex-wrap
-				 			font-uthmanicHafs">{{ verse.text }} <small class="inline-flex items-center justify-center text-right ltr font-uthmanicHafs">﴾ {{ verseId }} ﴿</small>
+				 			">{{ verse.text }} <small class="inline-flex items-center justify-center text-right ltr font-uthmanicHafs">﴾ {{ verseId }} ﴿</small>
                     </p>
                 </div>
                 <div class="flex items-center justify-center gap-5 flex-col">
@@ -105,7 +105,7 @@ export default {
                 })
         },
         getTafseer: function() {
-            const url = `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafsir-muyassar/${this.$route.params.id}/${this.verseId}.json`
+            const url = `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafsir-muyassar/${this.$route.params.id}/${this.verseId - 1}.json`
             axios.get(url)
                 .then(res => {
                     this.tafseer = res.data.text
