@@ -29,7 +29,7 @@
                     <p id="ayah" class="text-center text-white 
 				 			text-4xl rtl flex items-center 
 				 			justify-center w-full p-5 gap-2
-				 			flex-wrap
+				 			flex-wrap font-uthmanicHafs 
 				 			">{{ verse.text }} <small class="inline-flex items-center justify-center text-right ltr font-uthmanicHafs">﴾ {{ verseId }} ﴿</small>
                     </p>
                 </div>
