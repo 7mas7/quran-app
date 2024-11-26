@@ -105,7 +105,7 @@ export default {
                 })
         },
         getTafseer: function() {
-            const url = `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafsir-muyassar/${this.$route.params.id}/${this.verseId - 1}.json`
+            const url = `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/ar-tafsir-muyassar/${this.$route.params.id}/${this.verseId}.json`
             axios.get(url)
                 .then(res => {
                     this.tafseer = res.data.text
